@@ -6,6 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Pagina principal</h1>
+    <h1>Pagina Principal</h1>
+
+    {{ range .Publicacoes }}
+        <h3>{{ .Titulo }}</h3>
+        <p>{{ .Conteudo }}</p>
+    {{ end }}
 </body>
 </html>
