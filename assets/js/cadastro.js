@@ -16,10 +16,11 @@ function criarUsuario(event) {
             email: $('#email').val(),
             senha: $('#senha').val(),
             nick: $('#nick').val()
-        },
-        success: function (response) {
-            alert('Usuário criado com sucesso!');
-            window.location.href = '/login';
         }
+    }).done(function () {
+        alert('Usuário cadastrado com sucesso!');
+        window.location.href = '/login';
+    }).fail(function (erro) {
+        alert('Erro ao cadastrar usuário!');
     });
 }
